@@ -1,0 +1,28 @@
+{
+  "name": "filant",
+  "version": "0.0.0",
+  "description": "Browser extension to open web components in your editor",
+  "license": "MIT",
+  "scripts": {
+  },
+  "workspaces": ["packages/*"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pocket-apps/filant.git"
+  },
+  "contributors": [
+    {
+      "name": "Victor Navarro",
+      "email": "victor@vimtor.io",
+      "url": "https://vimtor.io"
+    },
+    {
+      "name": "Toni Realp",
+      "email": "tonirealp@gmail.com"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/pocket-apps/filant/issues"
+  },
+  "homepage": "https://github.com/pocket-apps/filant#readme"
+}
