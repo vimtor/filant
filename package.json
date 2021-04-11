@@ -19,11 +19,13 @@
   ],
   "scripts": {
     "format": "prettier . --write",
+    "prepare": "husky install",
     "start": "npm run start --workspace=filant-react-playground"
   },
   "prettier": "@pocket-apps/prettier-config",
   "devDependencies": {
     "@pocket-apps/prettier-config": "^2.0.0",
+    "husky": "^6.0.0",
     "prettier": "^2.2.1"
   }
 }
