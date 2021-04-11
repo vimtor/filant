@@ -3,13 +3,6 @@
   "version": "0.0.0",
   "description": "Browser extension to open web components in your editor",
   "license": "MIT",
-  "scripts": {
-  },
-  "workspaces": ["packages/*"],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pocket-apps/filant.git"
-  },
   "contributors": [
     {
       "name": "Victor Navarro",
@@ -21,8 +14,16 @@
       "email": "tonirealp@gmail.com"
     }
   ],
-  "bugs": {
-    "url": "https://github.com/pocket-apps/filant/issues"
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "format": "prettier . --write",
+    "start": "npm run start --workspace=filant-react-playground"
   },
-  "homepage": "https://github.com/pocket-apps/filant#readme"
+  "prettier": "@pocket-apps/prettier-config",
+  "devDependencies": {
+    "@pocket-apps/prettier-config": "^2.0.0",
+    "prettier": "^2.2.1"
+  }
 }
