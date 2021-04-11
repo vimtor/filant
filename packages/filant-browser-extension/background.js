@@ -1,7 +1,7 @@
 chrome.contextMenus.create({
   id: '1',
   title: 'Open in editor',
-  contexts: ['all']
+  contexts: ['all'],
 })
 
 chrome.contextMenus.onClicked.addListener((data, tab) => {

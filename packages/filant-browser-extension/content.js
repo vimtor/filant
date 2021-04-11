@@ -1,7 +1,7 @@
 let element = null
 
 document.addEventListener('contextmenu', event => {
-  element = event.target.getAttribute("data-filant")
+  element = event.target.getAttribute('data-filant')
   console.log(element)
 })
 
