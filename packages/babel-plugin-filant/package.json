@@ -1,0 +1,16 @@
+{
+  "name": "babel-plugin-filant",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "@babel/helper-plugin-utils": "^7.10.1",
+    "@babel/plugin-syntax-jsx": "^7.10.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.1",
+    "@babel/preset-react": "^7.13.13"
+  },
+  "peerDependencies": {
+    "@babel/core": "^7.0.0"
+  }
+}
