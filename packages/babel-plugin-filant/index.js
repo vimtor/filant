@@ -5,9 +5,18 @@ module.exports = function ({ types: t }) {
     visitor: {
       JSXOpeningElement({ node }, state) {
         const filename = state.file.opts.filename
-        const { line, column } = node.loc.start
-        const value = t.stringLiteral(`${filename}:${line}:${column}`)
-        node.attributes.push(t.jsxAttribute(name, value))
+        const hasAttribute = node.attributes.some(
+          attr => attr.type === 'JSXAttribute' && attr.name.name === 'data-filant'
+        )
+
+        if (!hasAttribute && filename) {
+          const line = node.loc.start.line || 0
+          const column = node.loc.start.column || 0
+          const value = t.stringLiteral(`${filename}:${line}:${column}`)
+
+          // TODO: Check performance difference between array.push
+          node.attributes.unshift(t.jsxAttribute(name, value))
+        }
       },
     },
   }
