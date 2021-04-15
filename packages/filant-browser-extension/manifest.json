@@ -3,7 +3,7 @@
   "description": "Browser extension to open web components in your editor",
   "version": "1.0",
   "manifest_version": 3,
-  "permissions": ["activeTab", "scripting", "contextMenus", "tabs"],
+  "permissions": ["activeTab", "scripting", "contextMenus", "tabs", "storage"],
   "background": {
     "service_worker": "background.js"
   },

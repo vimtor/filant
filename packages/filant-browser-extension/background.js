@@ -1,3 +1,12 @@
+const ides ={
+  idea: "idea",
+  vscode: "vscode"
+}
+
+chrome.runtime.onInstalled.addListener(() => {
+  chrome.storage.sync.set({ide:ides.idea})
+})
+
 chrome.contextMenus.create({
   id: '1',
   title: 'Open in editor',
@@ -6,7 +15,22 @@ chrome.contextMenus.create({
 
 chrome.contextMenus.onClicked.addListener((data, tab) => {
   chrome.tabs.sendMessage(tab.id, 'getElement', response => {
-    console.log(response)
+    chrome.storage.sync.get("ide", ({ide}) =>{
+      console.log(ide)
+      switch (ide) {
+        case ides.idea:
+          fetch(`http://localhost:63342/api/file/${response.data}`).then(()=>{console.log("Sended");});
+          break;
+
+        case ides.vscode:
+          console.log("vscode");
+          break;
+
+        default:
+          console.log("default ide not set");
+          break;
+      }
+    })
     // For IDEA products (Webstorm, IntelliJ), send a GET request to:
     // http://localhost:63342/api/file/<file_path>
     // Configured in File | Settings | Build, Execution, Deployment | Debugger | Built-in Server
