@@ -8,6 +8,12 @@ chrome.contextMenus.create({
   contexts: ['all'],
 })
 
+chrome.runtime.onMessage.addListener(message => {
+  chrome.contextMenus.update('filant', {
+    visible: !!message,
+  })
+})
+
 chrome.contextMenus.onClicked.addListener((data, tab) => {
   chrome.tabs.sendMessage(tab.id, 'getDataAttribute', dataAttribute => {
     if (!dataAttribute) {

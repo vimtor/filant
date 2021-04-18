@@ -1,10 +1,12 @@
 let dataAttributeFilant = null
 
+document.addEventListener('mouseover', event => {
+  dataAttributeFilant = event.target.getAttribute('data-filant')
+  chrome.runtime.sendMessage(dataAttributeFilant)
+})
+
 document.addEventListener('contextmenu', event => {
   dataAttributeFilant = event.target.getAttribute('data-filant')
-  // chrome.contextMenus.update('filant', {
-  //   visible: !!dataAttributeFilant,
-  // })
 })
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
