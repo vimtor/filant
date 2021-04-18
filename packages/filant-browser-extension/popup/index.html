@@ -6,14 +6,32 @@
     <script defer src="index.js"></script>
   </head>
   <body>
+    <section class="top-section">
+      <div class="select-editor">
+        <h1>Select editor</h1>
+        <p> Which editor should open the file?</p>
+      </div>
+      <div class="icons">
+        <img src="../images/icons/github.svg">
+        <img src="../images/icons/heart.svg">
+      </div>
+    </section>
     <section class="ide-grid">
-      <button data-ide="VSCODE">VSCode</button>
-      <button data-ide="IDEA">IDEA</button>
-      <button data-ide="ATOM">Atom</button>
-      <button data-ide="VIM">Vim</button>
-      <button data-ide="VSCODE_INSIDERS">VSCode Insiders</button>
-      <button data-ide="SUBLIME_TEXT">Sublime Text</button>
-      <button data-ide="TEXT_MATE">VSCode Insiders</button>
+      <div class="ide-row">
+        <input type="image" src="../images/ides/vscode.png" data-ide="VSCODE"/>
+        <input type="image" src="../images/ides/intellij.png" data-ide="IDEA"/>
+        <input type="image" src="../images/ides/atom.png" data-ide="ATOM"/>
+        <input type="image" src="../images/ides/vim.png" data-ide="VIM"/>
+      </div>
+      <div class="ide-row">
+        <input type="image" src="../images/ides/insiders.png" data-ide="VSCODE_INSIDERS"/>
+        <input type="image" src="../images/ides/sublime.png" data-ide="SUBLIME_TEXT"/>
+        <input type="image" src="../images/ides/textmate.png" data-ide="TEXT_MATE"/>
+      </div>
+    </section>
+    <hr>
+    <section class="bottom-section">
+      <p>Make sure that you've checked the  option in IntelliJ to allow this component to work.</p>
     </section>
   </body>
 </html>
