@@ -21,7 +21,8 @@
   "scripts": {
     "format": "prettier . --write",
     "prepare": "husky install",
-    "start": "npm run start --workspace=example-react"
+    "start": "npm run start --workspace=example-react",
+    "start:angular": "npm run start --workspace=example-angular"
   },
   "prettier": "@pocket-apps/prettier-config",
   "devDependencies": {
