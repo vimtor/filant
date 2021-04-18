@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import logo from './logo.svg'
 import './App.css'
 
-function Button(props) {
-  return <button {...props}>Hola</button>
+function Button() {
+  return <button data-filant={undefined}>Without data attribute</button>
 }
 
 function App() {
