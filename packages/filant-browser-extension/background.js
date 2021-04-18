@@ -4,13 +4,19 @@ chrome.runtime.onInstalled.addListener(() => {
 
 chrome.contextMenus.create({
   id: 'filant',
-  title: 'Open in editor',
+  title: 'Open in VSCode',
   contexts: ['all'],
 })
 
 chrome.runtime.onMessage.addListener(message => {
   chrome.contextMenus.update('filant', {
     visible: !!message,
+  })
+})
+
+chrome.storage.onChanged.addListener(changes => {
+  chrome.contextMenus.update('filant', {
+    title: `Open in ${getIdeNameFromId(changes.ide.newValue)}`,
   })
 })
 
@@ -72,4 +78,23 @@ function createUrl(attribute) {
 
 function openTab(url) {
   chrome.tabs.create({ url })
+}
+
+function getIdeNameFromId(id) {
+  switch (id) {
+    case 'IDEA':
+      return 'IDEA'
+    case 'VSCODE':
+      return 'VSCode'
+    case 'VSCODE_INSIDERS':
+      return 'VSCode Insiders'
+    case 'ATOM':
+      return 'Atom'
+    case 'VIM':
+      return 'Vim'
+    case 'SUBLIME_TEXT':
+      return 'Sublime Text'
+    case 'TEXT_MATE':
+      return 'TextMate'
+  }
 }
