@@ -23,7 +23,8 @@
     "prepare": "husky install",
     "start": "npm run start --workspace=example-react",
     "start:angular": "npm run start --workspace=example-angular",
-    "start:react": "npm run start --workspace=example-react"
+    "start:react": "npm run start --workspace=example-react",
+    "start:svelte": "npm run start --workspace=example-svelte"
   },
   "prettier": "@pocket-apps/prettier-config",
   "devDependencies": {
