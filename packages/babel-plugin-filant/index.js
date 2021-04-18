@@ -12,7 +12,7 @@ module.exports = function ({ types: t }) {
         if (!hasAttribute && filename) {
           const line = node.loc.start.line || 0
           const column = node.loc.start.column || 0
-          const value = t.stringLiteral(`${filename}:${line}:${column}`)
+          const value = t.stringLiteral(`${filename}|${line}|${column}`)
 
           // TODO: Check performance difference between array.push
           node.attributes.unshift(t.jsxAttribute(name, value))
