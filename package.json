@@ -15,12 +15,13 @@
     }
   ],
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "examples/*"
   ],
   "scripts": {
     "format": "prettier . --write",
     "prepare": "husky install",
-    "start": "npm run start --workspace=filant-react-playground"
+    "start": "npm run start --workspace=example-react"
   },
   "prettier": "@pocket-apps/prettier-config",
   "devDependencies": {
