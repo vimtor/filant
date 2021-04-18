@@ -5,7 +5,7 @@ chrome.runtime.onInstalled.addListener(() => {
 chrome.contextMenus.create({
   id: 'filant',
   title: 'Open in VSCode',
-  contexts: ['all'],
+  contexts: ['page'],
 })
 
 chrome.runtime.onMessage.addListener(message => {
