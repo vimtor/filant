@@ -1,12 +1,15 @@
-let element = null
+let dataAttributeFilant = null
 
 document.addEventListener('contextmenu', event => {
-  element = event.target.getAttribute('data-filant')
+  dataAttributeFilant = event.target.getAttribute('data-filant')
+  // chrome.contextMenus.update('filant', {
+  //   visible: !!dataAttributeFilant,
+  // })
 })
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  if (message == 'getElement') {
-    sendResponse({ data: element.toString() })
+  if (message === 'getDataAttribute') {
+    sendResponse(dataAttributeFilant.toString())
   }
   return true
 })
