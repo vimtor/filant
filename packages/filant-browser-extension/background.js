@@ -32,7 +32,6 @@ chrome.contextMenus.onClicked.addListener((data, tab) => {
     chrome.storage.sync.get('ide', ({ ide }) => {
       switch (ide) {
         case 'IDEA':
-          // Configured in File | Settings | Build, Execution, Deployment | Debugger | Built-in Server
           fetch(`http://localhost:63342/api/file/${path}`)
           break
         case 'VSCODE':
@@ -42,16 +41,13 @@ chrome.contextMenus.onClicked.addListener((data, tab) => {
           openTab(`vscode-insiders://file/${path}`)
           break
         case 'ATOM':
-          // For Atom, install this plugin: https://atom.io/packages/open, then open a new tab to:
           openTab(`atom://open?url=${url}`)
           break
         case 'VIM':
-          // For Vim, Sublime and GVim research: https://github.com/sshkarupa/url-handlers, then open a new tab to:
-          // vim://open/?url=file://<file_path>&line=<line>&column=<column>
+          openTab(`vim://open?url=${url}`)
           break
         case 'SUBLIME_TEXT':
-          // For Vim, Sublime and GVim research: https://github.com/sshkarupa/url-handlers, then open a new tab to:
-          // vim://open/?url=file://<file_path>&line=<line>&column=<column>
+          openTab(`subl://open?url=${url}`)
           break
         case 'TEXT_MATE':
           openTab(`txmt://open?url=${url}`)
@@ -59,7 +55,7 @@ chrome.contextMenus.onClicked.addListener((data, tab) => {
         default:
           console.error(`'${ide}' is not a supported IDE. Falling back to VSCode`)
           chrome.storage.sync.set({ ide: 'VSCODE' })
-          openTab(`vscode://file/${dataAttribute}`)
+          openTab(`vscode://file/${path}`)
           break
       }
     })

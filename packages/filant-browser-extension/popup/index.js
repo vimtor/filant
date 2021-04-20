@@ -1,4 +1,4 @@
-const ideButtons = document.querySelectorAll('[data-ide]')
+const ideButtons = document.querySelectorAll('.ide-grid > [data-ide]')
 
 chrome.storage.sync.get('ide', ({ ide: selectedIde }) => {
   ideButtons.forEach(ideButton => {

@@ -68,7 +68,22 @@
       </section>
     </main>
     <footer>
-      <p>Make sure that you've checked the option in IntelliJ to allow this component to work.</p>
+      <div data-ide="VSCODE">You don't need to do anything extra for VSCode</div>
+      <div data-ide="IDEA">
+        For IDEA products (Webstorm, IntelliJ...) make sure to have the both the port to 63341 and checked "Can accept
+        external connections" in File | Settings | Build, Execution, Deployment | Debugger | Built-in Server
+      </div>
+      <div data-ide="VSCODE_INSIDERS">You don't need to do anything extra for VSCode Insiders</div>
+      <div data-ide="ATOM">Make sure to install the <a href="https://atom.io/packages/open">open</a> atom plugin</div>
+      <div data-ide="TEXT_MATE">You don't need to do anything extra for TextMate</div>
+      <div data-ide="VIM">
+        For Vim, follow the installation instructions described
+        <a href="https://github.com/sshkarupa/url-handlers">here</a>
+      </div>
+      <div data-ide="SUBLIME_TEXT">
+        For SublimeText, follow the installation instructions described
+        <a href="https://github.com/sshkarupa/url-handlers">here</a>
+      </div>
     </footer>
   </body>
 </html>
