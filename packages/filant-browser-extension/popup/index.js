@@ -1,4 +1,7 @@
-const ideButtons = document.querySelectorAll('.ide-grid > [data-ide]')
+const ideButtons = document.querySelectorAll('.ide__item')
+const instructionForwardButton = document.querySelector('[aria-label="see instructions"]')
+const instructionsBackButton = document.querySelector('.instructions__back')
+const instructionsSection = document.querySelector('.instructions')
 
 chrome.storage.sync.get('ide', ({ ide: selectedIde }) => {
   ideButtons.forEach(ideButton => {
@@ -14,4 +17,12 @@ ideButtons.forEach(ideButton => {
     ideButton.classList.add('selected')
     chrome.storage.sync.set({ ide: ideButton.getAttribute('data-ide') })
   })
+})
+
+instructionForwardButton.addEventListener('click', () => {
+  instructionsSection.classList.remove('instructions--hidden')
+})
+
+instructionsBackButton.addEventListener('click', () => {
+  instructionsSection.classList.add('instructions--hidden')
 })
