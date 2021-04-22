@@ -125,6 +125,10 @@ main {
   font-size: 1rem;
 }
 
+.explanation__item--hidden {
+  display: none;
+}
+
 .instructions {
   position: absolute;
   top: 0;
