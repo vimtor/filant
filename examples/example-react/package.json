@@ -1,16 +1,15 @@
 {
   "scripts": {
-    "build": "snowpack build",
-    "start": "snowpack dev"
+    "start": "parcel src/index.html"
   },
   "dependencies": {
     "react": "^17.0.0",
     "react-dom": "^17.0.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.13.16",
+    "@babel/preset-env": "^7.13.15",
     "@babel/preset-react": "^7.13.13",
-    "@snowpack/plugin-babel": "^2.1.7",
-    "@snowpack/plugin-react-refresh": "^2.4.0",
-    "snowpack": "^3.0.1"
+    "parcel-bundler": "^1.12.5"
   }
 }
