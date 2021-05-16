@@ -31,7 +31,7 @@ chrome.contextMenus.onClicked.addListener((data, tab) => {
 
     chrome.storage.sync.get('ide', ({ ide }) => {
       switch (ide) {
-        case 'IDEA':
+        case 'WEBSTORM':
           fetch(`http://localhost:63342/api/file/${path}`)
           break
         case 'VSCODE':
@@ -78,8 +78,8 @@ function openTab(url) {
 
 function getIdeNameFromId(id) {
   switch (id) {
-    case 'IDEA':
-      return 'IDEA'
+    case 'WEBSTORM':
+      return 'WebStorm'
     case 'VSCODE':
       return 'VSCode'
     case 'VSCODE_INSIDERS':
