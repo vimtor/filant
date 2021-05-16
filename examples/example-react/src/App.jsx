@@ -1,8 +1,5 @@
 import React from 'react'
-
-function Button() {
-  return <button data-filant={undefined}>Without Attribute</button>
-}
+import Button from './Button'
 
 function App() {
   return (
@@ -11,6 +8,7 @@ function App() {
       <p>
         A paragraph with <code>nested code</code>
       </p>
+      <p data-filant={undefined}>A paragraph without the attribute</p>
     </div>
   )
 }
