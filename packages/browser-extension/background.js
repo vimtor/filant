@@ -8,12 +8,6 @@ chrome.contextMenus.create({
   contexts: ['page'],
 })
 
-chrome.runtime.onMessage.addListener(message => {
-  chrome.contextMenus.update('filant', {
-    visible: !!message,
-  })
-})
-
 chrome.storage.onChanged.addListener(changes => {
   chrome.contextMenus.update('filant', {
     title: `Open in ${getIdeNameFromId(changes.ide.newValue)}`,
