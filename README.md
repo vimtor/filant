@@ -1,9 +1,9 @@
-<h1 align="center">
-   filant
-   <br>
-   <img src="./assets/logo.png" alt="filant logo" width="300" >
-   <br>
-</h1>
+![filant video](./assets/video.mp4)
+
+<div align="center">
+   <h1 align="center">filant</h1>
+   <p align="center">The tool for working on large frontend code bases</p>
+</div>
 
 <p align="center">The tool for working on large frontend code bases</p>
 
