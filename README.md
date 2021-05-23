@@ -1,11 +1,9 @@
-![filant video](./assets/video.mp4)
-
 <div align="center">
-   <h1 align="center">filant</h1>
+   <h1 align="center">filant 📄</h1>
    <p align="center">The tool for working on large frontend code bases</p>
 </div>
 
-<p align="center">The tool for working on large frontend code bases</p>
+![filant video](https://user-images.githubusercontent.com/36263538/119271882-d0446880-bc03-11eb-8864-ff8a0e3ca3cb.gif)
 
 ## 🧠 Why
 
