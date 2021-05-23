@@ -22,7 +22,7 @@ Filant aims to make this process instantaneous. It is as simple as right-clickin
 
 You will need to do 2 things to set up _filant_:
 
-1. Install the browser extension for [Chrome]() or [Firefox]()
+1. Install the browser extension for [Chrome](https://chrome.google.com/webstore/detail/eilfjabonchhnfknjldhlbedoimgdkfp) or [Firefox]()
 2. Add the plugin [babel-plugin-filant](/packages/babel-plugin-filant) to your project
 
 Once those things are done you can click the browser extension icon and select your IDE and follow any further instructions specific for that IDE
