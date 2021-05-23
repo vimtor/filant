@@ -20,7 +20,6 @@ chrome.storage.sync.get('ide', ({ ide: selectedIde }) => {
 ideButtons.forEach(ideButton => {
   ideButton.addEventListener('click', () => {
     ideButtons.forEach(ideButton => ideButton.classList.remove('selected'))
-    ideExplanations.forEach(ideExplanation => ideExplanation.classList.add('explanation__item--hidden'))
     ideButton.classList.add('selected')
     chrome.storage.sync.set({ ide: ideButton.getAttribute('data-ide') })
   })
@@ -29,6 +28,7 @@ ideButtons.forEach(ideButton => {
 chrome.storage.onChanged.addListener((changes, _) => {
   const selectedIde = changes.ide.newValue
   ideExplanations.forEach(ideExplanation => {
+    ideExplanation.classList.add('explanation__item--hidden')
     if (ideExplanation.getAttribute('data-ide') === selectedIde) {
       ideExplanation.classList.remove('explanation__item--hidden')
     }
