@@ -4,7 +4,7 @@ import Button from './Button'
 function App() {
   return (
     <div>
-      <h1>React Example</h1>
+      <h1>Preact Example</h1>
       <Button />
       <p>
         A paragraph with <code>nested code</code>

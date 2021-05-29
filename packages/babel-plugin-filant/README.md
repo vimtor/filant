@@ -1,6 +1,6 @@
 <div align="center">
    <h1 align="center">babel-plugin-filant</h1>
-   <p align="center">Integrate <a href="https://github.com/pocket-apps/filant">filant</a> browser extension with JSX projects</p>
+   <p align="center">Integrate <a href="https://github.com/pocket-apps/filant">filant</a> browser extension with React.js/JSX projects</p>
 </div>
 
 ## 📦 Setup

@@ -1,6 +1,6 @@
 {
-  "name": "Filant",
-  "description": "Browser extension to open web components in your editor",
+  "name": "Filant: Open web components in your editor",
+  "description": "Open React.js and other web components in editor with a single click",
   "version": "0.1.0",
   "manifest_version": 3,
   "permissions": ["contextMenus", "storage"],
